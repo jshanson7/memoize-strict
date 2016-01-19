@@ -11,19 +11,22 @@ const memoizeTest = memoize((a, b) => {
   return typeof a + ' ' + typeof b;
 });
 
-console.log(memoizeTest(1, 2)); // => "number number"
-console.log(memoizeTest(1, 2)); // => "number number"
-console.log(counter); // => "1"
-
-console.log(memoizeTest({a: 'a'}, {b: 'b'})); // => "object object"
-console.log(memoizeTest({a: 'a'}, {b: 'b'})); // => "object object"
-console.log(counter); // => "3"
+memoizeTest(1, true); // => "number boolean"
+counter; // => "1"
+memoizeTest(1, true); // => "number boolean"
+counter; // => "1"
 
 const a = {a: 'a'};
-const b = {b: 'b'};
-console.log(memoizeTest(a, b)); // => "object object"
-console.log(memoizeTest(a, b)); // => "object object"
-console.log(counter); // => "4"
+const b = ['b'];
+memoizeTest(a, b); // => "object object"
+counter; // => "2"
+memoizeTest(a, b); // => "object object"
+counter; // => "2"
+
+memoizeTest({a: 'a'}, ['b']); // => "object object"
+counter; // => "3"
+memoizeTest({a: 'a'}, ['b']); // => "object object"
+counter; // => "4"
 ```
 
 ## Installation
