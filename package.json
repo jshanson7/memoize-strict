@@ -1,0 +1,30 @@
+{
+  "name": "memoize-strict",
+  "version": "0.0.1",
+  "description": "Strict multi-argument memoization",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jshanson7/memoize-strict.git"
+  },
+  "keywords": [
+    "array",
+    "array-likes",
+    "convert"
+  ],
+  "bugs": {
+    "url": "https://github.com/jshanson7/memoize-strict/issues"
+  },
+  "homepage": "https://github.com/jshanson7/memoize-strict#readme",
+  "author": "Jeff Hanson",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "toarr": "0.0.1"
+  }
+}
