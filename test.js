@@ -68,4 +68,34 @@ describe('memoize()', () => {
     memoizeTest(a3, b3);
     assert(counter === 2);
   });
+  it('no args', () => {
+    let counter = 0;
+    const memoizeTest = memoize(() => {
+      counter++;
+      return 'test';
+    });
+    
+    assert(memoizeTest() === 'test');
+    assert(counter === 1);
+    assert(memoizeTest() === 'test');
+    assert(counter === 1);
+    assert(memoizeTest('a') === 'test');
+    assert(counter === 2);
+    assert(memoizeTest('a') === 'test');
+    assert(counter === 2);
+  });
+  it('clear()', () => {
+    let counter = 0;
+    const memoizeTest = memoize(() => counter++);
+    
+    memoizeTest();
+    assert(counter === 1);
+    memoizeTest();
+    assert(counter === 1);
+    memoizeTest.clear();
+    memoizeTest();
+    assert(counter === 2);
+    memoizeTest();
+    assert(counter === 2);
+  });
 });
