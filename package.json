@@ -1,6 +1,6 @@
 {
   "name": "memoize-strict",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Strict multi-argument memoization",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,10 @@
     "url": "git+https://github.com/jshanson7/memoize-strict.git"
   },
   "keywords": [
-    "array",
-    "array-likes",
-    "convert"
+    "memoize",
+    "strict",
+    "equality",
+    "arguments"
   ],
   "bugs": {
     "url": "https://github.com/jshanson7/memoize-strict/issues"
